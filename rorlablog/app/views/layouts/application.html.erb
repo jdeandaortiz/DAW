@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JDEANDABlog </title>
+    <%= csrf_meta_tags %>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>JDEANDA BLOG</h1>
+      </header>
+      <div id="trunk">
+        <main>
+          <div id="flash_messages"><%= flash_messages(:close) %></div>
+          <%= yield %>
+        </main>
+        <aside>
+          <%= render "shared/log_status" %>
+        </aside>
+      </div>
+      <footer>
+        JDO BLOG<sup>&reg;</sup> desde 2017. JDO derechos reservados.
+      </footer>
+    </div>
+  </body>
+</html>
